@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // 出力するJavaScriptのバージョン
+    "module": "commonjs", // Node.jsではCommonJSモジュールを使用
+    "lib": ["ESNext", "DOM"], // 使用するライブラリ
+    "allowJs": true, // .jsファイルのコンパイルを許可
+    "outDir": "./dist", // コンパイルされたファイルの出力先ディレクトリ
+    "rootDir": "./src", // ソースファイルのルートディレクトリ
+    "strict": true, // 厳格な型チェックオプションを有効にする
+    "esModuleInterop": true, // ESモジュールの互換性を向上させる
+    "skipLibCheck": true, // ライブラリファイルの型チェックをスキップ
+    "forceConsistentCasingInFileNames": true, // ファイル名の大文字小文字を厳密に区別
+    "resolveJsonModule": true, // JSONモジュールをインポート可能にする
+    "moduleResolution": "node", // モジュールの解決方法をNode.js互換に
+    "typeRoots": ["./node_modules/@types"], // 型定義ファイルの検索パス
+    "noImplicitAny": true, // any型の使用を明示的にしないとエラーにする
+    "noUnusedLocals": true, // 使用されていないローカル変数にエラーを出す
+    "noUnusedParameters": true, // 使用されていないパラメータにエラーを出す
+    "noFallthroughCasesInSwitch": true, // switch文のフォールスルーを防ぐ
+    "noImplicitReturns": true // 全てのコードパスでの戻り値を強制する
+  },
+  "include": ["src/**/*"], // コンパイル対象のファイル
+  "exclude": ["node_modules", "dist"] // コンパイル対象外のファイル
+}

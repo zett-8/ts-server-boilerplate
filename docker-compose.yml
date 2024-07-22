@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder
+    container_name: express-server
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+    ports:
+      - "3000:3000"  # ローカルのポート3000をコンテナのポート3000にマッピング
+    volumes:
+      - .:/builder  # ローカルのカレントディレクトリをコンテナ内の/usr/src/appにマウント
+    command: ["pnpm", "start"]
